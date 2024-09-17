@@ -3,15 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChatBot</title>
+    <title>TP - Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .chat-box {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .messages {
+            border: 1px solid #ddd;
+            padding: 10px;
+            height: 300px;
+            overflow-y: scroll;
+            margin-bottom: 20px;
+        }
+        .message {
+            padding: 5px;
+            border-bottom: 1px solid #eee;
+        }
+        .message:last-child {
+            border-bottom: none;
+        }
+        form {
+            display: flex;
+        }
+        input[type="text"] {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        button {
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
 </head>
 <body>
-    <h1>ChatBot</h1>
-    <input type="text" id="prompt">
-    <button>ask to ai</button>
+    <div class="chat-box">
+        <h1>Chatbot</h1>
 
-    <div>
-        
+        <!-- Zone d'affichage des messages de l'ia -->
+        <div class="messages">
+            <% if (typeof data !== 'undefined') { %>
+                <p><%= data %></p>
+            <% } %>
+        </div>
+
+        <!-- Formulaire pour envoyer des messages a l'ia -->
+        <form action="/ai" method="POST">
+            <input type="text" name="message" placeholder="Ask to ai..." required />
+            <button type="submit">Ask to ai</button>
+        </form>
     </div>
 </body>
 </html>

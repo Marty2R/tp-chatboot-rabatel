@@ -16,6 +16,9 @@ app.set("views", "./public/views");
 // static files
 app.use(express.static("public"));
 
+// Middleware pour traiter les requêtes POST envoyées via un formulaire
+app.use(express.urlencoded({ extended: true }));
+
 app.use("/", Route);
 
 app.listen(PORT, () => {
