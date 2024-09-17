@@ -33,8 +33,10 @@ const search = async (req, res) => {
   // Simuler des données à passer à la vue
   const data = a.response.text();
 
+  const question = req.body.message;
+
   // Rendre la vue index.ejs avec des données simulées
-  return res.render("index", { data });
+  return res.render("index", { question, data });
 };
 
 export default { chatbot, search };
