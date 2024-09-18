@@ -57,10 +57,10 @@
 
         <!-- Zone d'affichage des messages de l'ia -->
         <div class="messages">
-            <% if (typeof data !== 'undefined') { %>
-                <p><%= question %></p>
-                <p><%= data %></p>
-            <% } %>
+            <% conv.map(msg => { %>
+                <p><%= msg.question %></p>
+                <p><%= msg.reponse %></p>
+              <% }) %>
         </div>
 
         <!-- Formulaire pour envoyer des messages a l'ia -->
