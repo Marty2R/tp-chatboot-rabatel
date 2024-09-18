@@ -12,23 +12,37 @@ Avant de commencer, verifier d'avoir les éléments suivants installés :
 
 ## Installation
 
-1. Clonez le repo : https://github.com/Marty2R/tp-chatboot-rabatel.git
+1. > Clonez le repo : https://github.com/Marty2R/tp-chatboot-rabatel.git
 
-2. cd tp-chatboot-rabatel
+2. > cd tp-chatboot-rabatel
 
 ## Lancer le projet
 
-1. npm i
+1. > npm i
 
-2. npm run dev
+2. > npm run dev
 
 Le projet sera disponible sur http://localhost:8000.
+
+## Configaration
+
+Créez un fichier .env dans la racine du projet.
+
+Copier le code
+
+> GEMINI_API_KEY=your-gemini-api-key
+
+> PORT=8000
+
+Remplacez your-gemini-api-key par votre clé d'accès à l'API de Gemini 1.5 Flash.
+
+Si nécessaire, modifiez le port par défaut dans le fichier .env ou dans index.js.
 
 ## Utilisation
 
 1. Ouvrez votre navigateur et allez à l'adresse http://localhost:8000.
 
-2. Entrez une question dans le champ de texte et cliquez sur "Rechercher".
+2. Entrez une question dans le champ de texte et cliquez sur "Ask to ia...".
 
 Le chatbot répondra à la question en utilisant le modèle Gemini.
 
