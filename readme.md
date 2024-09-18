@@ -2,6 +2,9 @@
 
 Ce projet est un Chatbot connecté à l'api Gemini 1.5 Flash qui générer des réponses en fonction des messages que vous aller envoyer.
 
+> [!NOTE]
+> Ce projet est encore en cours de développement.
+
 ## Prérequis
 
 Avant de commencer, verifier d'avoir les éléments suivants installés :
